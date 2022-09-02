@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.container {
+  background-color: #222;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s;
+}
+
+.content {
+  background-color: #333;
+  color: #fff;
+  padding: 35px 90px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  gap: 20px;
+  position: relative;
+  transform: background-color 0.5s;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #222;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon::before {
+  content: "\f185";
+  font-family: fontAwesome;
+  color: #1d92ea;
+  font-size: 20px;
+}
+
+.light {
+  background-color: #eee;
+  transition: background-color 0.5s;
+}
+
+.light-content {
+  background-color: #fff;
+  transform: background-color 0.5s;
+  color: #000;
+}
+
+.content.light-content .icon {
+  background-color: #eee;
+}
+
+.content.light-content .icon::before {
+  content: "\f186";
+  color: #000;
+  font-size: 22px;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.desativado {
+  display: none;
+}
+
+p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+input {
+  border-radius: 4px;
+  padding: 5px 10px;
+  background-color: #e3e2e2;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: #1d92ea;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+@media (max-width: 550px) {
+  .content {
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+  }
+
+  .content.light-content .icon {
+    background-color: transparent;
+  }
+}
