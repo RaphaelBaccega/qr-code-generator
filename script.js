@@ -15,13 +15,13 @@ const msg = document.querySelector(".msg-generate");
 const qrCode = document.querySelector("#qr-code");
 const userInput = document.querySelector("input");
 
-function limpar() {
-  msg.classList.remove("desativado");
+function clear() {
+  msg.classList.remove("off");
   qrCode.src = "";
 }
 
-function mensagem() {
-  msg.classList.add("desativado");
+function message() {
+  msg.classList.add("off");
 }
 
 function generateQrCode() {
@@ -32,11 +32,11 @@ function generateQrCode() {
 }
 
 function start() {
-  limpar();
+  clear();
 
   setTimeout(() => {
     generateQrCode();
-    mensagem();
+    message();
   }, 1000);
 }
 
